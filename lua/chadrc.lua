@@ -8,7 +8,14 @@ M.ui = {
 	theme = "catppuccin",
 
   -- M.plugins == "custom.plugins"
+  cmp = {
+    style = "atom",
+  },
 
+  statusline = {
+    theme = "minimal",
+    separator_style = "round"
+  },
   -- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },

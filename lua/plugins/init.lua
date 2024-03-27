@@ -36,11 +36,27 @@ return {
   --
   {
    	"nvim-treesitter/nvim-treesitter",
-   	opts = {
+
+      config = function(_, opts)
+         dofile(vim.g.base46_cache .. "syntax")
+      require("nvim-treesitter.configs").setup(opts)
+      end,
+     	opts = {
    		ensure_installed = {
    			"vim", "lua", "vimdoc",
         "html", "css", "php"
    		},
-   	},
+      {
+        incremental_selection = {
+          enable = true,
+          keymaps = {
+            init_selection = "gi", -- set to `false` to disable one of the mappings
+            node_incremental = "grn",
+            scope_incremental = "grc",
+            node_decremental = "grm",
+          },
+        },
+      },
+    },
   },
 }

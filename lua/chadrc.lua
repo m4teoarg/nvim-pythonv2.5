@@ -7,7 +7,9 @@ local M = {}
 M.ui = {
 	theme = "catppuccin",
 
-  -- M.plugins == "custom.plugins"
+  M.plugins == "custom.plugins",
+  M.plugins == "custom.plugins",
+
   cmp = {
     style = "atom",
   },
